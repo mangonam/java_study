@@ -17,10 +17,12 @@ public class ArrayTest08While {
             while (i < lottoNumbers.length) {
                 duplicate = false;
                 number = random.nextInt(45) + 1;
-                for (int k = 0; k < i; k++) {
+                int k = 0;
+                while (k < i) {
                     if (lottoNumbers[k] == number) {
                         duplicate=true;
                     }
+                    k++;
                 }
                 if (!duplicate) {
                     lottoNumbers[i] = number;
